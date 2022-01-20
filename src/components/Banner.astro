@@ -1,0 +1,64 @@
+---
+
+const images = [
+  "assets/img/banner-img-1.webp",
+  "assets/img/banner-img-2.webp",
+  "assets/img/banner-img-3.webp",
+  "assets/img/banner-img-4.webp",
+];
+
+---
+
+<section id="banner">
+  <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      {images.map((item, index) => (
+        // <div class={carousel-item carousel-item-${t + 1} {t ? "" : "active"} data-bs-interval="3000">
+        <div class={ index ? `carousel-item carousel-item-${index + 1}` : `carousel-item carousel-item-${index + 1} active` } data-bs-interval="3000">
+          <div class="header-wrap text-center">
+            <h1 class="text-white">
+              <span>Non-Surgical Facelift And Skin Tightening</span>
+              <img
+                src="assets/img/white-logo-icon.webp"
+                class="img-fluid"
+              />
+              <span></span>
+            </h1>
+          </div>
+          <div
+            class="
+              banner-img-wrap
+              d-flex
+              flex-column
+              justify-content-center
+            "
+            style='
+              background-image: url("${item}");
+            '
+          >
+            <div class="d-none d-md-block">
+              <div class="row">
+                <div class="col-5"></div>
+                <div class="col-7">
+                  <h1 class="text-dark">
+                    <span
+                      >Non-Surgical Facelift And Skin Tightening
+                      <img
+                        src="assets/img/white-logo-icon.webp"
+                        class="img-fluid"
+                        style="height: 150px !important; filter: brightness(0.9)
+                        ;"
+                        height="150px"
+                        width="150px"
+                      /></span
+                    >
+                  </h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

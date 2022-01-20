@@ -1,5 +1,5 @@
 {
-  "name": "@example/framework-vue",
+  "name": "@example/starter",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -9,10 +9,14 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "astro": "^0.22.14"
+    "@astrojs/renderer-vue": "^0.3.0",
+    "@types/video.js": "^7.3.29",
+    "astro": "^0.22.11",
+    "sass": "^1.48.0"
   },
   "dependencies": {
-    "vue-carousel": "^0.18.0",
-    "vue3-carousel": "^0.1.35"
+    "bootstrap": "^5.1.3",
+    "swiper": "^7.4.1",
+    "video.js": "^7.17.0"
   }
 }

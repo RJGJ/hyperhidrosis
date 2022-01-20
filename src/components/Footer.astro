@@ -1,0 +1,48 @@
+---
+// const dateNow = new Date().getSeconds();
+---
+
+<footer>
+  <div class="container row mx-auto my-0">
+    <div class="col-12 d-flex flex-column align-items-center">
+      <span>
+        <img
+          src="assets/img/logofinal-01.webp"
+          alt="site-logo"
+          class="img-fluid footer-site-logo"
+          height="90px"
+          width="202px"
+        />
+      </span>
+    </div>
+    <div class="col-12 d-md-flex justify-content-center text-center">
+      <span target="new" class="address-link pb-md-0 text-center"
+        ><svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-geo-alt-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d=" M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+          /></svg
+        >12457 Ventura Blvd #205, Studio City, CA 91604, United States</span
+      >
+    </div>
+  </div>
+  <div class="container border-top border-light copyright">
+    <p class="copyright text-light text-center p-1 m-0">
+      <small>
+        © <span class="current-date">1969</span> <strong>MyBotoxLA</strong>.
+        All Rights Reserved.
+      </small>
+    </p>
+  </div>
+  <script>
+    document.querySelectorAll('.current-date').forEach(item => {
+      item.innerText = new Date().getFullYear();
+    })
+  </script>
+</footer>

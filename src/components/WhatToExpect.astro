@@ -1,0 +1,59 @@
+---
+import VideoPlayer from '../components/VideoPlayer.vue'
+
+const content = `Our expert medical staff are trained in stopping armpit sweating with just one session of injections. It's life-changing for a lot of our patients - and it will be for you, too. That's why we're so passionate about what we do. Great treatment is about more than exceptional technique. At the end of the day, it's about really listening and understanding where you're coming from as a patient. We know how hard it is to live with hyperhidrosis excessive sweating. It makes you feel self-conscious, and you might even be embarrassed to talk about it. My Botox LA Med Spa offers a comfortable and inviting environment for our patients. From the moment you step into our office, you'll feel welcome. We make sure you have the support you need before, during, and after your treatment. Feel free to take your time and ask questions. We're here for you.`;
+---
+
+<section id="what-to-expect">
+  <div class="top-divider">
+    <svg
+      width=""
+      height=""
+      viewBox="0 0 1921.463 98.664"
+    >
+      <path
+        d="M221.593,16.177c107.12,29.846,234.844,42.541,428.07,40.563s302.836-12.7,491.545-21.431,378.488-18.45,572.7-19.131,290.174,7.633,429.149,32.569V114.8H221.593Z"
+        transform="translate(-221.593 -16.139)"
+        fill="#fff"
+      />
+    </svg>
+  </div>
+  <div
+    class="container d-flex flex-column justify-content-center align-items-center"
+  >
+    <h3>WHAT TO EXPECT</h3>
+    <h2 class="text-center">During your Experience</h2>
+    <div class="row pt-md-5 pt-3">
+      <div class="col-12 col-md-6 col-lg-5">
+        <div class="video-wrapper d-flex">
+          <div class="container">
+            <VideoPlayer client:visible />
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-7 my-auto d-none d-md-block">
+        <div class="container drye-content">
+          <p class="text-wrap">
+            { content }
+          </p>
+        </div>
+      </div>
+    </div>
+    <p class="mx-auto text-wrap d-md-none drye-content">
+      { content }
+    </p>
+  </div>
+  <div class="bottom-divider">
+    <svg
+      width=""
+      height=""
+      viewBox="0 0 1921.463 98.664"
+    >
+      <path
+        d="M221.593,16.177c107.12,29.846,234.844,42.541,428.07,40.563s302.836-12.7,491.545-21.431,378.488-18.45,572.7-19.131,290.174,7.633,429.149,32.569V114.8H221.593Z"
+        transform="translate(-221.593 -16.139)"
+        fill="#fff"
+      />
+    </svg>
+  </div>
+</section>

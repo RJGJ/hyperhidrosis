@@ -1,0 +1,45 @@
+---
+const data = [
+  {
+    icon: './assets/img/what-are-your-benifits/easy-on-busy-schedule.svg',
+    title: 'Easy On a Busy Schedule'
+  },
+  {
+    icon: './assets/img/what-are-your-benifits/zero-scaring.svg',
+    title: 'Zero Scarring'
+  },
+  {
+    icon: './assets/img/what-are-your-benifits/long-lasting-result.svg',
+    title: 'Long-lasting Results'
+  },
+  {
+    icon: './assets/img/what-are-your-benifits/armpit.webp',
+    title: 'Targeted Sweat Reduction'
+  },
+];
+---
+
+<section id="what-are-your-benefits">
+  <div class="container">
+    <div class="row text-center">
+      <h3>WHAT ARE YOUR BENEFITS</h3>
+      <h2>Main Benefits of Ultherapy</h2>
+    </div>
+    <div class="row">
+      {data.map(item => (
+        <div class="col-6 col-lg-3">
+          <div class="wayb-items">
+            <img
+              loading="lazy"
+              src={item.icon}
+              height="120px"
+              width="120px"
+              class="img-fluid"
+            />
+            <p class="text-center fw-bold">{item.title}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

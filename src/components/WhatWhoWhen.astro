@@ -1,0 +1,95 @@
+---
+import { brand } from '../pages/index.astro';
+
+const accordionData = [
+  {
+    question: "What is hyperhidrosis?",
+    answer: `Hyperhidrosis is a condition that causes excessive sweating. Even though some people naturally sweat more than others, people with hyperhidrosis sweat much more than their body actually needs. It can strike at any time of day or night. If you have hyperhidrosis, you might find that it's affecting your job, relationships, self-esteem, and social activities. People with hyperhidrosis usually say that it feels like sweating is controlling their life.`,
+  },
+  {
+    question: "What causes excessive sweating?",
+    answer: `It's currently unknown what causes hyperhidrosis. Sometimes it can be a sign of another medical condition. If you're experiencing sweating that affects your daily activities, visit a dermatologist or a doctor. Only a medical professional can provide an accurate diagnosis.`,
+  },
+  {
+    question: "Is Botox for hyperhidrosis safe?",
+    answer: `<p>Botox is very safe, but like any procedure, there is some risk for complications. Make sure you tell your provider about any medical conditions you may have, as well as any medications you're currently taking. Don't get Botox for hyperhidrosis if you're pregnant or breastfeeding.</p><p>Possible side effects can include:</p><ul><li>Dry mouth</li><li>Headaches</li><li>Fatigue</li><li>Neck pain</li><li>Rash due to an allergic reaction</li><li>Loss of appetite</li><li>Chills</li><li>Trouble swallowing</li><li>Nausea</li><li>Itching</li></ul><p>&nbsp;</p>`,
+  },
+];
+---
+
+<section id="what-who-when">
+  <div class="top-divider">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width=""
+      height=""
+      viewBox="0 0 1921.463 98.664"
+    >
+      <path
+        d="M221.593,16.177c107.12,29.846,234.844,42.541,428.07,40.563s302.836-12.7,491.545-21.431,378.488-18.45,572.7-19.131,290.174,7.633,429.149,32.569V114.8H221.593Z"
+        transform="translate(-221.593 -16.139)"
+        fill="#fff"
+      />
+    </svg>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="section-headings text-center">
+        <h3>WHAT, WHO, WHEN</h3>
+        <h2>{ brand } Frequently Asked Questions</h2>
+      </div>
+    </div>
+    <div class="row flex-lg-row-reverse">
+      <div
+        class="col-12 col-lg-4 d-flex align-items-center justify-content-center"
+      >
+        <div
+          class="www-img-wrap d-flex justify-content-center machine-img"
+        >
+          <img
+            src="./assets/img/feature-elite.webp"
+            alt=""
+            class="www-img img-fluid"
+            height="539px"
+            width="356px"
+          />
+        </div>
+      </div>
+      <div class="col-12 col-lg-8">
+        <div
+          class="accordion accordion-flush bg-transparent"
+          id="accordion1"
+        >
+        {accordionData.map((item, idx) => (
+          <div class="accordion-item">
+            <h2 class="accordion-header" id={`heading-${idx}`}>
+              <button
+                class={`accordion-button " +  ${idx ? "collapsed" : ""}`}
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target={"#collapse-" + idx}
+                aria-expanded={`${idx ? "false" : "true"}`}
+                aria-controls={"collapse-" + idx}
+              >
+                { item.question }
+              </button>
+            </h2>
+            <div
+              id={"collapse-" + idx}
+              class={`accordion-collapse collapse ${idx ? "" : "show"}`}
+              aria-labelledby={"heading-" + idx}
+              data-bs-parent="#accordion1"
+            >
+              <div class="accordion-body">
+                <p>
+                  { item.answer } 
+                </p>
+              </div>
+            </div>
+          </div>
+        ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,34 +1,169 @@
 ---
-// Component Imports
-import Counter from '../components/Counter.vue';
-import MyCarousel from '../components/MyCarousel.vue';
+// Component Imports.vue';
+import Header from '../components/Header.astro';
+import Banner from '../components/Banner.astro';
+import Footer from '../components/Footer.astro';
+import BannerCTA from '../components/BannerCTA.astro';
+import WhatOurClientsSay from "../components/WhatOurClientsSay.astro";
+import WhatToExpect from '../components/WhatToExpect.astro';
+import WhatWhoWhen from '../components/WhatWhoWhen.astro';
+import WhatAreYourBenefits from '../components/WhatAreYourBenefits.astro';
+import FooterCTA from '../components/FooterCTA.astro'
 
-// Full Astro Component Syntax:
-// https://docs.astro.build/core-concepts/astro-components/
+
+export const brand = 'Hyperhidrosis'
+const title = `MyBotoxLA | ${brand}`;
 ---
-
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-		<style>
-			html,
-			body {
-				font-family: system-ui;
-				margin: 0;
-			}
-			body {
-				padding: 2rem;
-			}
-		</style>
-	</head>
-	<body>
-		<main>
-			<Counter client:visible>
-				<h1>Hello, Vue!</h1>
-			</Counter>
-			<MyCarousel client:visible />
-		</main>
-	</body>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>{title}</title>
+	<link rel="icon" type="image/x-icon" href="/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800&family=Playfair+Display&family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href={Astro.resolve('../styles/swiper-bundle.min.css')} >
+  <link rel="stylesheet" lang="scss" href={Astro.resolve('../scss/style.scss')} >
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
+</head>
+<body>
+  <Header />
+  <main>
+    <Banner />
+    <BannerCTA /> 
+    <WhatOurClientsSay />
+    <WhatToExpect />
+    <section id="what-to-expect-cta">
+      <div class="container">
+        <div class="card border-none cta">
+          <div class="card-body text-center text-light">
+            <h3 class="card-title">
+               ONE TREATMENT UP TO
+              <span class="text-primary">6 MONTHS</span>
+            </h3>
+            <div class="card-text">
+              <p>
+                <small class="cta-subtitle"
+                  >relief from severe underarm sweating</small
+                >
+              </p>
+              <form>
+                <div class="row">
+                  <div class="col-12 col-lg-4">
+                    <input
+                      class="form-control mb-3"
+                      type="text"
+                      name="full-name"
+                      id="full-name"
+                      required
+                      autocomplete="name"
+                      placeholder="Full Name*"
+                    />
+                  </div>
+                  <div class="col-12 col-lg-4">
+                    <input
+                      class="form-control mb-3"
+                      type="tel"
+                      name="phone-number"
+                      id="phone-number"
+                      required
+                      autocomplete="tel"
+                      placeholder="Phone Number*"
+                    />
+                  </div>
+                  <div class="col-12 col-lg-4">
+                    <input
+                      class="form-control mb-3"
+                      type="email"
+                      name="email"
+                      id="email"
+                      required
+                      autocomplete="email"
+                      placeholder="Email Address*"
+                    />
+                  </div>
+                </div>
+                <p class="cta-bottom-message"></p>
+                <input
+                  type="submit"
+                  value="SCHEDULE NOW"
+                  class="btn btn-primary"
+                />
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <WhatAreYourBenefits />
+    <WhatWhoWhen />
+    <FooterCTA />
+    <section id="safety-info">
+      <div class="container py-5">
+        <h2><small>Safety - IMPORTANT SAFETY INFORMATION</small></h2>
+        <div class="content">
+          <p>
+            BOTOX® may cause serious side effects that can be life threatening.
+            Get medical help right away if you have any of these problems any
+            time (hours to weeks) after injection of BOTOX®:  Problems swallowing,
+            speaking, or breathing, due to weakening of associated muscles, can
+            be severe and result in loss of life. You are at the highest risk
+            if these problems are pre-existing before injection. Swallowing
+            problems may last for several months Spread of toxin effects. The
+            effect of botulinum toxin may affect areas away from the injection
+            site and cause serious symptoms including: loss of strength and all-over
+            muscle weakness, double vision, blurred vision and drooping eyelids,
+            hoarseness or change or loss of voice, trouble saying words clearly,
+            loss of bladder control, trouble breathing, and trouble swallowing.
+            There has not been a confirmed serious case of spread of toxin effect
+            away from the injection site when BOTOX® has been used at the
+            recommended dose to treat severe underarm sweating. BOTOX® may cause
+            loss of strength or general muscle weakness, vision problems, or
+            dizziness within hours to weeks of taking BOTOX®. If this happens, do
+            not drive a car, operate machinery, or do other dangerous activities.
+            Do not take BOTOX® if you: are allergic to any of the ingredients in
+            BOTOX® (see Medication Guide for ingredients); had an allergic reaction
+            to any other botulinum toxin product such as Myobloc® (rimabotulinumtoxinB),
+            Dysport® (abobotulinumtoxinA), or Xeomin® (incobotulinumtoxinA); have a
+            skin infection at the planned injection site.  The dose of BOTOX® is not
+            the same as, or comparable to, another botulinum toxin product. Serious
+            and/or immediate allergic reactions have been reported including itching,
+            red itchy welts, wheezing, asthma symptoms, or dizziness or feeling faint.
+            Get medical help right away if you experience symptoms; further injection
+            of BOTOX® should be discontinued. Tell your doctor about all your muscle
+            or nerve conditions such as ALS or Lou Gehrig’s disease, myasthenia gravis,
+            or Lambert-Eaton syndrome, as you may be at increased risk of serious side
+            effects including difficulty swallowing and difficulty breathing from
+            typical doses of BOTOX®. Tell your doctor about all your medical conditions,
+            including if you: have or have had bleeding problems; have plans to have
+            surgery; had surgery on your face; weakness of forehead muscles; trouble
+            raising your eyebrows; drooping eyelids; any other abnormal facial change;
+            are pregnant or plan to become pregnant (it is not known if BOTOX® can harm
+            your unborn baby); are breastfeeding or plan to (it is not known if BOTOX®
+            passes into breast milk). Tell your doctor about all the medicines you take,
+            including prescription and over-the-counter medicines, vitamins, and
+            herbal supplements. Using BOTOX® with certain other medicines may
+            cause serious side effects. Do not start any new medicines until
+            you have told your doctor that you have received BOTOX® in the past.
+            Tell your doctor if you received any other botulinum toxin product in
+            the last 4 months; have received injections of botulinum toxin such as
+            Myobloc®, Dysport®, or Xeomin® in the past (tell your doctor exactly
+            which product you received); have recently received an antibiotic by
+            injection; take muscle relaxants; take an allergy or cold medicine;
+            take a sleep medicine; take aspirin-like products or blood thinners.
+            Other side effects of BOTOX® include: dry mouth, discomfort or pain at
+            the injection site, tiredness, headache, neck pain, eye problems: double
+            vision, blurred vision, decreased eyesight, drooping eyelids, swelling
+            of your eyelids, dry eyes; and drooping eyebrows. For more information
+            refer to the Medication Guide or talk with your doctor.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+  <script src={Astro.resolve('../potato.js')} type="module" defer></script>
+  <!-- <script src="/assets/potato.js" type="module"></script> -->
+</body>
 </html>

@@ -1,0 +1,716 @@
+// * variables
+$primary: #d56aa0;
+$secondary: #361d2e;
+
+$btn-padding-y-lg: 19px;
+$btn-padding-x-lg: 32px;
+$btn-padding-y-sm: 14px;
+$btn-padding-x-sm: 24px;
+$btn-border-radius: 5px;
+
+$card-border-width: 0;
+
+// * globals
+:root {
+  --swiper-theme-color: #{$primary} !important;
+}
+
+// typography
+h1,
+h2 {
+  font-family: "Playfair Display", serif;
+}
+
+h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+}
+
+.btn {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.accordion-button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
+h2 {
+  @extend .text-dark;
+
+  font-size: 24px !important;
+}
+
+h3 {
+  font-size: 10px !important;
+}
+
+.blue {
+  color: #5cc6ef !important;
+}
+
+.cta {
+  // background: linear-gradient(
+  //   90deg,
+  //   lighten($primary, 50%) 0%,
+  //   darken($primary, 20%) 100%
+  // );
+  background-color: $secondary !important;
+  margin-top: -5px;
+
+  .card-title {
+    // font-size: 13px !important;
+    font-size: 20px !important;
+    font-weight: bold;
+  }
+
+  .card-text {
+    .cta-subtitle {
+      text-transform: uppercase;
+      font-size: 12px !important;
+    }
+  }
+
+  .card-body {
+    width: 1000px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 40px 30px !important;
+  }
+  .btn {
+    padding: 14px 40px;
+  }
+
+  .cta-bottom-message {
+    font-size: 12px !important;
+  }
+}
+
+p,
+h5 {
+  font-size: 16px !important;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"] {
+  padding: 17px;
+}
+
+// VideoJS stuff
+.video-js,
+.vjs-poster {
+  background-color: transparent !important;
+}
+.video-js {
+  margin: 0 auto !important;
+}
+.my-video-dimensions {
+  height: 400px;
+}
+
+// * per-section
+header,
+.invi-header {
+  .navbar {
+    min-height: 120px;
+    max-height: 120px;
+  }
+
+  .navbar-brand {
+    width: 43%;
+
+    img {
+      // height: 50px;
+      height: auto;
+      width: 100%;
+      max-height: 90px;
+      object-fit: contain;
+    }
+  }
+}
+
+.invi-header {
+  // z-index: -1 !important;
+
+  .cta-btn {
+    z-index: 100;
+  }
+}
+
+// main {
+//   // margin-top: 95px;
+// }
+
+#banner {
+  .banner-img-wrap {
+    height: 300px;
+  }
+
+  .header-wrap {
+    @extend .d-md-none;
+
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 9px;
+
+    h1 {
+      font-size: 20px;
+
+      *:first-child {
+        min-width: 100%;
+      }
+    }
+
+    img {
+      height: 30px !important;
+    }
+  }
+
+  .carousel {
+    .carousel-inner {
+      z-index: 0;
+    }
+  }
+
+  .carousel-item {
+    .banner-img-wrap {
+      // background-position: 30% bottom;
+      background-position: center bottom;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  .carousel-item:nth-child(odd) {
+    background-color: darken($primary, 0);
+    // .banner-img-wrap {
+    //   background-image: url("../assets/img/two-young-thick-thin-women-have-different-figures-comparison-concept.png"),
+    //     url("../assets/img/banner-star.png");
+    // }
+  }
+  .carousel-item:nth-child(even) {
+    background-color: lighten($primary, 10%);
+    // .banner-img-wrap {
+    //   background-image: url("../assets/img/young-woman-shows-her-weight-loss-by-wearing-old-jeans.png"),
+    //     url("../assets/img/banner-star.png");
+    // }
+  }
+}
+
+#banner-cta {
+  .card-title {
+    text-transform: uppercase;
+  }
+}
+
+#what-our-clients-say {
+  padding: 100px 0;
+  overflow: hidden;
+  // background-color: #f8f9fb;
+
+  .swiper-testimonial {
+    height: calc(100% + 300px);
+    width: 100%;
+    overflow-y: visible;
+    padding-top: 50px;
+    overflow: visible;
+
+    .swiper-wrapper {
+      align-items: center;
+    }
+
+    .swiper-slide {
+      opacity: 50%;
+      transition: opacity 250ms ease;
+      min-height: 100%;
+
+      &.swiper-slide-active {
+        opacity: 100%;
+      }
+    }
+
+    .swiper-pagination-bullets {
+      margin-bottom: -60px;
+    }
+  }
+
+  .testimonial {
+    $padding-x: 17px;
+    $padding-y: 20px;
+    $height: 300px;
+
+    padding: 0;
+    position: relative;
+    margin: 10px auto;
+    background-color: white;
+    box-shadow: 0px 0px 45px rgba(0, 0, 0, 0.07);
+    max-width: 500px;
+
+    .stars {
+      img {
+        height: 18px;
+        width: auto;
+      }
+    }
+
+    .content {
+      p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 5; /* number of lines to show */
+        line-clamp: 5;
+        -webkit-box-orient: vertical;
+      }
+    }
+
+    &::before {
+      content: " ";
+      background-color: #c9c9c9;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      z-index: -1;
+      transform: translate(13px, 13px);
+    }
+  }
+}
+
+#what-to-expect {
+  padding: 30px 15px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    lighten($primary, 20%) 0%,
+    #fff 50%,
+    lighten($primary, 80%) 75.74%,
+    lighten($primary, 30%) 88.07%,
+    lighten($primary, 20%) 100%
+  );
+
+  .top-divider {
+    // border: solid 1px red;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform: rotate(180deg) rotateY(180deg);
+    position: absolute;
+    margin-top: -5px;
+  }
+  .bottom-divider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin-bottom: -6px;
+    transform: rotateY(180deg);
+  }
+
+  .video-wrapper {
+    border-radius: 5px;
+    overflow: clip;
+    max-width: 100%;
+    // margin-bottom: 60px;
+  }
+
+  .drye-content {
+    &,
+    p {
+      line-height: 1.6;
+    }
+    max-width: 500px;
+  }
+}
+
+#what-to-expect-2 {
+  padding: 20px 15px;
+
+  h2 {
+    margin-bottom: 10px;
+  }
+
+  .swiper {
+    @extend .p-0;
+
+    margin-top: -70px;
+
+    .swiper-slide {
+      @extend .d-flex, .justify-content-center, .align-items-center;
+
+      height: 400px;
+
+      .container {
+        img {
+          height: 100%;
+          max-height: 300px;
+          width: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}
+
+#what-to-expect-cta {
+  margin-bottom: -80px;
+  padding-top: 120px;
+}
+
+#what-are-your-benefits {
+  padding: 126px 15px 21px 15px;
+  background: linear-gradient(lighten($primary, 20%), white);
+
+  h2 {
+    padding-bottom: 30px;
+  }
+
+  .wayb-items {
+    @extend .d-flex, .flex-column, .align-items-center;
+
+    padding-bottom: 38px;
+
+    .img-fluid {
+      margin-bottom: 15px;
+      height: 61px;
+      object-fit: contain;
+    }
+  }
+
+  img {
+    filter: saturate(0);
+  }
+}
+
+#what-who-when {
+  background-color: lighten($primary, 35%);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  padding-bottom: 100px;
+  margin-bottom: 50px;
+  padding-top: 120px;
+  position: relative;
+
+  .top-divider {
+    margin-top: -19px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotateZ(180deg);
+    width: 100%;
+    overflow-x: clip;
+
+    svg {
+      width: 100%;
+      min-width: 100%;
+      height: 100%;
+      min-height: 50px;
+    }
+  }
+
+  .www-img-wrap {
+    padding-bottom: 50px;
+
+    .www-img {
+      max-height: 300px;
+    }
+  }
+
+  .section-headings {
+    padding-bottom: 30px;
+  }
+
+  .accordion {
+    .accordion-item,
+    .accordion-button {
+      @extend .bg-transparent;
+    }
+  }
+}
+
+#safety-info {
+  // padding: 100px 15px 50px 15px;
+
+  h2 {
+    padding-bottom: 15px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 20px !important;
+  }
+}
+
+#footer-cta-2 {
+  .cta {
+    margin: 0 0 0 0;
+
+    .card-title {
+      font-size: 18px !important;
+    }
+  }
+}
+
+footer {
+  background-color: transparent;
+  padding: 20px 0 30px 0;
+  color: $secondary;
+
+  .footer-site-logo {
+    height: 120px;
+    padding-bottom: 30px;
+  }
+
+  .footer-nav {
+    max-width: 772px;
+    padding-bottom: 61px;
+
+    a {
+      padding-bottom: 22px;
+    }
+  }
+
+  .social-icons {
+    padding-bottom: 50px;
+    a {
+      padding: 0 15px;
+
+      i {
+        font-size: 21px;
+      }
+    }
+  }
+
+  .address-link {
+    padding-bottom: 50px;
+  }
+
+  .copyright {
+    padding-top: 21px;
+    color: $secondary !important;
+  }
+
+  a {
+    text-decoration: none;
+    // color: #2071ca !important;
+  }
+}
+
+// shape dividers
+.custom-shape-divider-top-1637896053 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1637896053 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 30px;
+}
+
+.custom-shape-divider-top-1637896053 .shape-fill {
+  fill: #ffffff;
+}
+
+.custom-shape-divider-bottom-1637896263 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1637896263 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 30px;
+}
+
+.custom-shape-divider-bottom-1637896263 .shape-fill {
+  fill: #ffffff;
+}
+
+// * media-queries
+// X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .my-video-dimensions {
+    height: 600px;
+  }
+
+  header {
+    .navbar-brand img {
+      height: 90px;
+    }
+  }
+  #what-can-we-do {
+    .bottom-divider {
+      margin-bottom: -19px;
+    }
+  }
+
+  #what-to-expect-2 {
+    .swiper {
+      margin-top: -54px !important;
+    }
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  // globals
+  h2 {
+    font-size: 40px !important;
+  }
+
+  h3 {
+    font-size: 18px !important;
+  }
+
+  p,
+  h5 {
+    font-size: 18px !important;
+  }
+
+  .cta {
+    padding: 40px 15px;
+    margin-top: -100px;
+
+    .card-title {
+      font-size: 45px !important;
+    }
+
+    .card-text {
+      .cta-subtitle {
+        font-size: 18px !important;
+      }
+    }
+  }
+
+  // sections
+  header {
+    .navbar-brand img {
+      height: 90px;
+      width: unset;
+    }
+  }
+
+  #what-can-we-do {
+    padding: 80px 30px 100px 30px;
+    .wcwd-item {
+      img {
+        height: 100px !important;
+      }
+    }
+  }
+
+  #banner {
+    .banner-img-wrap {
+      height: 650px;
+      background-position: 10% center !important;
+      background-size: contain !important;
+
+      h1 {
+        font-size: 40px !important;
+      }
+    }
+  }
+
+  #what-are-your-benefits {
+    .wayb-items {
+      .img-fluid {
+        height: 120px;
+      }
+    }
+  }
+
+  // #what-who-when {
+  //   .www-img-wrap {
+  //     .www-img {
+  //       max-height: unset !important;
+  //     }
+  //   }
+  // }
+
+  #what-to-expect {
+    padding: 100px 30px;
+
+    .video-wrapper {
+      max-width: 600px;
+    }
+
+    .content {
+      line-height: 1.5;
+    }
+  }
+
+  #what-to-expect-2 {
+    padding: 0 30px 120px 30px;
+
+    .swiper {
+      margin-top: -40px;
+      .swiper-slide {
+        height: 410px;
+      }
+    }
+  }
+
+  footer {
+    // background-color: #0085b8;
+    padding: 20px 30px 30px 10px;
+
+    .footer-site-logo {
+      max-height: 150px;
+    }
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  #banner {
+    .banner-img-wrap {
+      h1 {
+        font-size: 89px !important;
+      }
+    }
+  }
+  #what-can-we-do {
+    .bottom-divider {
+      margin-bottom: -50px;
+    }
+  }
+  #what-who-when {
+    .www-img-wrap {
+      .www-img {
+        max-height: unset !important;
+      }
+    }
+  }
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {
+}
+// @import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../../node_modules/bootstrap/scss/_utilities.scss";
+// @import "../../node_modules/swiper/css/navigation";
+// @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css");
+// @import "../css/swiper-bundle.min.css";

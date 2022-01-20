@@ -1,0 +1,65 @@
+---
+import {brand} from '../pages/index.astro'
+---
+
+<section id="banner-cta">
+  <div class="container p-0 px-md-2">
+    <div class="card border-none cta">
+      <div class="card-body text-center text-light">
+        <h3 class="card-title">
+          Up to 25% Off* {brand} Under Arm Treatment
+        </h3>
+        <div class="card-text">
+          <p>
+            <small class="cta-subtitle"
+              >Control Under Arm Sweating</small
+            >
+          </p>
+          <form>
+            <div class="row">
+              <div class="col-12 col-lg-4">
+                <input
+                  class="form-control mb-3"
+                  type="text"
+                  name="full-name"
+                  id="full-name"
+                  required
+                  autocomplete="name"
+                  placeholder="Full Name*"
+                />
+              </div>
+              <div class="col-12 col-lg-4">
+                <input
+                  class="form-control mb-3"
+                  type="tel"
+                  name="phone-number"
+                  id="phone-number"
+                  required
+                  autocomplete="tel"
+                  placeholder="Phone Number*"
+                />
+              </div>
+              <div class="col-12 col-lg-4">
+                <input
+                  class="form-control mb-3"
+                  type="email"
+                  name="email"
+                  id="email"
+                  required
+                  autocomplete="email"
+                  placeholder="Email Address*"
+                />
+              </div>
+            </div>
+            <p class="cta-bottom-message"></p>
+            <input
+              type="submit"
+              value="SCHEDULE NOW"
+              class="btn btn-primary"
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
